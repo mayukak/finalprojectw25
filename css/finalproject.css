@@ -1,0 +1,520 @@
+    body {
+      font-family: 'Caveat', sans-serif;
+      margin: 0;
+      background-image: url('../images/background.png');
+      background-size: cover;
+      background-position: center;
+      color: #333;
+    }
+
+    header {
+      background-image: linear-gradient(white, #bdd9f0);
+      padding: 5rem;
+      text-align: center;
+      font-size: 6rem;
+      font-weight: bold;
+      color: black;
+    }
+
+    nav {
+      background-image: linear-gradient(#bdd9f0, #87bfed);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #a041cc;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      color: #000000;
+      justify-content: center;
+      text-align: center;
+      text-decoration: underline;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #000000;
+      text-align: center;
+      margin-top: none;
+    }
+
+    footer {
+      background-image: linear-gradient(#554bb9, #87bfed);
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 1rem;
+      color: white; 
+    }
+
+/*Currently on Repeat Section*/
+    .music-row {
+      display: flex;
+      gap: 2rem;
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .music-card {
+      display: flex;
+      align-items: center;      
+      justify-content: center;  
+      gap: 2rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-size: 1.8rem;
+      width: 650px;
+    }
+    
+    .music-info {
+      flex: 1;
+      text-align: left;          
+    }
+    
+    .music-card img {
+      width: 400px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+/*Favorite Albums Section*/
+    .album-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+      margin-top: 2rem;
+      padding: 0 1rem;
+    }
+    
+    .album-card {
+      width: 400px;
+      height: 500px;
+      perspective: 1000px;
+      font-size: 2rem;
+    }
+    
+    .album-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .album-card:hover .album-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .album-front,
+    .album-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      backface-visibility: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .album-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .album-back {
+      background-color: #ffffff;
+      color: #333;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      text-align: center;
+    }
+
+/*All Time Favorites Section*/
+    .faves-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      justify-items: center;
+    }
+    
+    .faves-card {
+      width: 1250px;
+      height: 200px;
+      perspective: 1000px;
+    }
+    
+    .faves-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .faves-front {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .faves-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      display: block;
+    }
+
+/*Popup for All Time Favorites*/
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    
+    #popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+    
+    #popup-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0rem;
+    }
+    
+    .popup-info {
+      margin-top: 1rem;
+    }
+    
+    #popup-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0rem;
+      margin-top: 0.3rem;
+    }
+    
+    #popup-description {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    #popup-link {
+      display: inline-block;
+      background: #1db954;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    #popup-link:hover {
+      background: #1ed760;
+    }
+    
+    #close-popup {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 2rem;
+      color: #555;
+      cursor: pointer;
+    }
+
+/*About Me Section*/
+    .about-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      color: #FFFFFF;
+      font-size: 1.5rem;
+    }
+    
+    .about-container img {
+      width: 400px;
+      height: 300px;
+      max-height: 350px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .about-text {
+      max-width: 600px;
+    }
+
+  /*More About Me Section*/
+    .extra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      justify-items: center;
+      text-align: center;
+    }
+    
+    .extra-item img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .extra-item p {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #000000;
+    }
+  
+  /*Hobbies Section*/
+    .hobbies-push {
+      margin-top: 6rem; 
+    }
+    
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      justify-items: center;
+      text-align: center;
+    }
+    
+    .hobby-item img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hobby-item p {
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+      color: #000000;
+    }
+
+/*My Favorite Genres Section*/
+    .genre-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4rem; 
+      margin-top: 4rem;
+      padding: 0 4rem;
+    }
+    
+    .genre-card {
+      width: 24vw;    
+      max-width: 420px;
+      min-width: 280px;
+      height: 420px;
+      perspective: 1000px;
+      margin: 1rem;    
+    }
+
+    .genre-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    
+    .genre-card:hover .genre-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .genre-front,
+    .genre-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+    
+    .genre-front h3 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .genre-back {
+      background: #ffffff;
+      color: #333;
+      transform: rotateY(180deg);
+    }
+    
+    .genre-front.pop {
+      background: linear-gradient(135deg, #ff8af4, #ffcc70);
+    }
+    
+    .genre-front.rnb {
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    }
+    
+    .genre-front.house {
+      background: linear-gradient(135deg, #7ef9ff, #89cff0);
+    }
+
+/*My Very Own Playlist Section*/
+    .playlist-card {
+      background-color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .playlist-intro {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    
+    .playlist-info ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+
+/*Spotify Embed*/
+    .spotify-button {
+      display: inline-block;
+      background: #1db954;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      font-size: 2rem;
+    }
+    
+    .spotify-button:hover {
+      background: #1ed760;
+    }
+
+    #homepage-genres-grid {
+      padding: 2rem 2rem 6rem 2rem;
+    }
+
+/*Six Different Genres Section*/
+    .genre-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 4rem 4rem;
+      place-items: center;       
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+      margin-top: 0;
+    }
+    
+    .genre-card {
+      width: 100%;
+      max-width: 360px;          
+      background-color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .genre-card:hover {
+      transform: translateY(-6px);
+    }
+    
+    .genre-album {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .genre-card h3 {
+      font-size: 2rem;
+      margin: 0.5rem;
+    }
+    
+    .genre-description {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      color: #000000;
+    }
+    
+.genre-card.soul  { background: linear-gradient(to bottom, #5e2b97, #9f83cc); color: white; }
+.genre-card.pop   { background: linear-gradient(to bottom, #ffcc70, #ff8af4); color: black; }
+.genre-card.rnb   { background: linear-gradient(to bottom, #fbc2eb, #a18cd1); color: black; }
+.genre-card.house { background: linear-gradient(to bottom, #7ef9ff, #89cff0); color: black; }
+.genre-card.kpop  { background: linear-gradient(to bottom, #ff3cac, #784ba0); color: white; }
+.genre-card.rock  { background: linear-gradient(to bottom, #7b71ee, #95a3dc); color: white; }
+
+        
