@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="css/finalproject.css" rel="stylesheet">
+</head>
+<body>
+  <header id="logo-header">Welcome to My World of Music</header>
+  <nav>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="mayukamusic.html">Mayuka's Music</a></li>
+    <li><a href="about.html">About Me</a></li>
+  </nav>
+  <main>
+    <section id="now">
+      <h2>Currently on Repeat</h2>
+      <div class="music-row">
+        <div class="music-card">
+          <div class="music-info">
+            <p><strong>Song:</strong> Wicked Games</p>
+            <p><strong>Artist:</strong> The Weeknd</p>
+            <p><strong>Album:</strong> House of Balloons</p>
+          </div>
+          <img src="images/wickedgames.jpg" alt="Hurry Up Tomorrow">
+        </div>
+
+        <div class="music-card">
+          <div class="music-info">
+            <p><strong>Song:</strong> The Days - NOTION REMIX</p>
+            <p><strong>Artist:</strong> Chrystal</p>
+            <p><strong>Album:</strong> Single</p>
+          </div>
+          <img src="images/thedays.jpeg" alt="Hurry Up Tomorrow">
+        </div>
+      </div>
+    </section>
+
+    <section id="albums">
+      <h2>Favorite Albums</h2>
+      <div class="album-gallery">
+        <div class="album-card">
+          <div class="album-inner">
+            <div class="album-front">
+              <img src="images/hardstonepsycho.jpeg" alt="Hardstone Psycho">
+            </div>
+            <div class="album-back">
+              <p><strong>Hardstone Psycho</strong><br>Hardstone Psycho blends Don Toliver’s signature melodic trap with gritty energy, delivering a hypnotic ride through chaos, confidence, and emotional detachment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="album-card">
+          <div class="album-inner">
+            <div class="album-front">
+              <img src="images/heroesandvillians.jpeg" alt="Heroes and Villians">
+            </div>
+            <div class="album-back">
+              <p><strong>Heroes and Villians</strong><br>Heroes & Villains is a cinematic, high-energy album that blends dark trap beats with superhero-inspired storytelling. Metro Boomin curates a bold lineup of features to craft an immersive soundscape full of drama, power, and grit.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="album-card">
+          <div class="album-inner">
+            <div class="album-front">
+              <img src="images/maadcity.jpeg" alt="m.A.A.d city">
+            </div>
+            <div class="album-back">
+              <p><strong>m.A.A.d city</strong><br>m.A.A.d city is a raw, narrative-driven album that chronicles Kendrick Lamar’s coming-of-age in Compton. Blending introspection with sharp storytelling, it’s a powerful reflection on youth, environment, and identity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faves">
+      <h2>All-Time Favorites</h2>
+      <h3>Click on the songs to view more</h3>
+      <div class="faves-gallery">
+        <div class="faves-card" data-title="Billie Jean" data-description="A timeless hit by Michael Jackson blending funk, pop, and iconic storytelling." data-link="https://open.spotify.com/track/5ChkMS8OtdzJeqyybCc9R5">
+          <div class="faves-inner">
+            <div class="faves-front">
+              <img src="images/billiejean.jpeg" alt="Billie Jean">
+            </div>
+          </div>
+        </div>
+
+        <div class="faves-card" data-title="Dangerous Woman" data-description="Ariana Grande’s sultry power ballad that showcases her vocal range and emotional delivery." data-link="https://open.spotify.com/track/6RUhbFEhrvGISaQ8u2j2JN">
+          <div class="faves-inner">
+            <div class="faves-front">
+              <img src="images/dangerouswoman.jpg" alt="Dangerous Woman">
+            </div>
+          </div>
+        </div>
+
+        <div class="faves-card" data-title="Paradise" data-description="Bazzi's optimistic take on this beatiful masterpiece about the fight between drugs and happiness" data-link="https://open.spotify.com/track/1yjznOLHmk9nMVskfYSMpr">
+          <div class="faves-inner">
+            <div class="faves-front">
+              <img src="images/paradise.jpeg" alt="Paradise">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="popup" style="display: none;">
+      <div id="popup-content">
+        <span id="close-popup">&times;</span>
+        <img id="popup-img" src="" alt="Album">
+        <p id="popup-title"></p>
+        <p id="popup-description"></p>
+        <a id="popup-link" href="#" target="_blank">🎧 Listen on Spotify</a>
+      </div>
+    </div>
+
+    <section id="genres">
+      <h2>Genres I Love</h2>
+      <div class="genre-gallery">
+        <div class="genre-card">
+          <div class="genre-inner">
+            <div class="genre-front pop">
+              <h3>Pop</h3>
+            </div>
+            <div class="genre-back">
+              <p>Catchy melodies, emotional lyrics, and always changing. Artists I love: Ariana Grande, The Weeknd, and Selena Gomez.</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="genre-card">
+          <div class="genre-inner">
+            <div class="genre-front rnb">
+              <h3>R&B</h3>
+            </div>
+            <div class="genre-back">
+              <p>Smooth, soulful, and expressive. I’m obsessed with artists like SZA and Brent Faiyaz.</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="genre-card">
+          <div class="genre-inner">
+            <div class="genre-front house">
+              <h3>House</h3>
+            </div>
+            <div class="genre-back">
+              <p>Upbeat, electronic, and made for dancing. Think Fred again.., John Summit and Chrystal vibes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="playlist">
+      <h2>Curated Playlist</h2>
+      <div class="playlist-card">
+        <div class="playlist-intro">
+          <p>Here’s a peek into my curated playlist of the month — tap to explore the full vibe 🌙</p>
+        </div>        
+        <div class="spotify-embed">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E362nClj018Pl?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  <footer>
+    &copy; 2025 Mayuka Kallakuri
+  </footer>
+  <script src="js/albumflip.js"></script>
+  <script>
+    document.getElementById("logo-header").addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

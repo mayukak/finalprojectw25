@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - My Music Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/finalproject.css">
+</head>
+<body>
+  <header id="logo-header">Welcome to My World of Music</header>
+  <nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="mayukamusic.html">Mayuka's Music</a></li>
+    <li><a class="active" href="about.html">About Me</a></li>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>Hi, I'm Mayuka!</h2>
+      <div class="about-container">
+        <img src="images/mayuka.jpg" alt="Mayuka smiling with headphones">
+        <div class="about-text">
+          <p>Welcome to my personal music page! I'm a passionate music lover who enjoys curating playlists, exploring new genres, and designing pages that reflect my vibe. From alternative pop to lo-fi beats, music is how I express myself and connect with the world.</p>
+          <p>When I’m not discovering new artists or geeking out over album visuals, I enjoy coding creative websites like this one. This project combines both of my favorite things — design + music — in a way that’s personal and fun. Hope you enjoy exploring!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="extra">
+      <h2>More About Me</h2>
+      <div class="extra-grid">
+        <div class="extra-item">
+          <img src="images/vicky.jpg" alt="Vicky">
+          <p>Here is one of my dogs, Vikram "Vicky" Kallakuri. He is a German Shepherd and he just turned one year old. He loves to play with balls and run in the grass.</p>
+        </div>
+        <div class="extra-item">
+          <img src="images/archie.jpg" alt="Archie">
+          <p>This is my another dog, Archie! He is a Shih-Tzu and is 11 years old. He loves to sleep and roll around on the couch. He is our first dog ever!</p>
+        </div>
+        <div class="extra-item">
+          <img src="images/family.JPG" alt="Family">
+          <p>This is picture of my parents and I. On the left is my mom and her name is Lakshmi and on the right is my dad and his name is Krishna. </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies" class="hobbies-push">
+      <h2>My Hobbies</h2>
+      <div class="hobbies-grid">
+        <div class="hobby-item">
+          <img src="images/wordle.png" alt="Wordle">
+          <p>I love to play the Wordle on the New York Times and honestly any NYT games!</p>
+        </div>
+        <div class="hobby-item">
+          <img src="images/cooking.png" alt="Cooking">
+          <p>Cooking is one of my favorite hobbies! I love trying out new recipes and experimenting with different cuisines.</p>
+        </div>
+        <div class="hobby-item">
+          <img src="images/traveling.png" alt="Traveling">
+          <p>I enjoy traveling and exploring new places. I love experiencing different cultures and trying local foods.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Mayuka Kallakuri
+  </footer>
+  <script src="js/albumflip.js"></script>
+  <script>
+    document.getElementById("logo-header").addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="css/finalproject.css" rel="stylesheet">
+</head>
+<body id="home">
+  <header id="logo-header">Welcome to My World of Music</header>
+  <nav>
+    <li><a class="active" href = "index.html">Home</a></li>
+    <li><a href = "mayukamusic.html">Mayuka's Music</a></li>
+    <li><a href = "about.html">About Me</a></li>
+  </nav>
+<h2>Genres</h2>
+<main id="homepage-genres-grid">
+  <div class="genre-grid">
+
+    <!-- SOUL -->
+    <div class="genre-card soul">
+      <img src="images/marvingaye.jpeg" alt="Marvin Gaye" class="genre-album">
+      <h3>What’s Going On by Marvin Gaye</h3>
+      <p class="genre-description">
+        Soul music emerged from gospel and R&B, known for its vocal depth and cultural roots in the Black American experience.
+      </p>
+    </div>
+
+    <!-- POP -->
+    <div class="genre-card pop">
+      <img src="images/oliviarodrigo.jpeg" alt="Olivia Rodrigo" class="genre-album">
+      <h3>good 4 u by Olivia Rodrigo</h3>
+      <p class="genre-description">
+        Pop is catchy, versatile, and ever-evolving — from bubblegum to breakup anthems that break records and hearts.
+      </p>
+    </div>
+
+    <!-- R&B -->
+    <div class="genre-card rnb">
+      <img src="images/sza.jpeg" alt="SZA" class="genre-album">
+      <h3>Snooze by SZA</h3>
+      <p class="genre-description">
+        R&B is smooth, expressive, and emotional — think sultry vocals, mellow beats, and raw storytelling.
+      </p>
+    </div>
+
+    <!-- HOUSE -->
+    <div class="genre-card house">
+      <img src="images/fredagain.jpeg" alt="Fred again.." class="genre-album">
+      <h3>Delilah by Fred again..</h3>
+      <p class="genre-description">
+        House is electronic rhythm that moves you — looping grooves, hypnotic synths, and club energy.
+      </p>
+    </div>
+
+    <!-- K-POP -->
+    <div class="genre-card kpop">
+      <img src="images/bts.jpg" alt="BTS" class="genre-album">
+      <h3>Dynamite by BTS</h3>
+      <p class="genre-description">
+        K-pop is a cultural phenomenon — pop precision, visual excellence, and global fan energy.
+      </p>
+    </div>
+
+    <!-- ROCK -->
+    <div class="genre-card rock">
+      <img src="images/foofighters.jpg" alt="Foo Fighters" class="genre-album">
+      <h3>Everlong by Foo Fighters</h3>
+      <p class="genre-description">
+        Rock is grit, guitars, and generational anthems — from classic power chords to indie rebels.
+      </p>
+    </div>
+
+  </div>
+</main>
+  
+<footer>
+  &copy; 2025 Mayuka Kallakuri
+</footer>
+    <script src="js/albumflip.js"></script>
+    <script>
+    document.getElementById("logo-header").addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+  </script>
+  </body>
+  </html>
